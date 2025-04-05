@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <!-- 基础信息 -->
     <meta charset="utf-8">
@@ -15,15 +14,12 @@
     <meta name="description" content="2973 - Workspace">
     <meta name="keywords" content="Index">
     <meta name="author" content="2973">
-    <title>2973 - Workspace</title>
-    <!-- jQuery -->
-    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.5.1/jquery.min.js"></script>
+    <title>2973 - 工作空间</title>
     <!-- HarmonyOS Sans -->
     <!-- 本站 CDN 已开启防盗链，非本站域名不可访问，请更改链接为下方内容，否则自定义字体将失效 -->
     <!-- https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css -->
     <!-- 引入样式 -->
-    <link rel="stylesheet" type="text/css"
-        href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/mobile.css">
     <link rel="stylesheet" type="text/css" href="./css/loading.css">
@@ -32,10 +28,6 @@
     <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png">
     <!-- Izitoast -->
     <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css">
-    <script type="text/javascript"
-        src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js">
-    </script>
-    <!-- Search Box -->
     <!--
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -45,42 +37,33 @@
     <!-- Aplayer -->
     <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.js" crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
     <!-- <script src="./js/Meting.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <!-- IE Out -->
-    <script>
-        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href =
-            "/upgrade-your-browser/index.html?referrer=" + encodeURIComponent(window.location.href);
-    </script>
     <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
-    <!-- 51.LA 统计 -->
-    <script src="./js/51LA.js"></script>
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.5.1/jquery.min.js"></script>
 </head>
-
 <body>
     <!--加载动画-->
-    <div id="loading-box">
-        <div class="loading-left-bg"></div>
-        <div class="loading-right-bg"></div>
-        <div class="spinner-box">
-            <div class="loader">
-                <div class="inner one"></div>
-                <div class="inner two"></div>
-                <div class="inner three"></div>
-            </div>
-            <div class="loading-word">
-                <p class="loading-title" id="loading-title">✨ LOADING... <span id="loading-s1"></span>% ✨</p>
-                「<span id="loading-text">用代码表达言语的魅力，用代码书写山河的壮丽。</span>」
-            </div>
-        </div>
-    </div>
+<!--    <div id="loading-box">-->
+<!--        <div class="loading-left-bg"></div>-->
+<!--        <div class="loading-right-bg"></div>-->
+<!--        <div class="spinner-box">-->
+<!--            <div class="loader">-->
+<!--                <div class="inner one"></div>-->
+<!--                <div class="inner two"></div>-->
+<!--                <div class="inner three"></div>-->
+<!--            </div>-->
+<!--            <div class="loading-word">-->
+<!--                <p class="loading-title" id="loading-title">✨ LOADING... <span id="loading-s1"></span>% ✨</p>-->
+<!--                「<span id="loading-text">用代码表达言语的魅力，用代码书写山河的壮丽。</span>」-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <section id="section" class="section">
-        <!-- 背景图片 -->  <!-- 背景图片 -->
+        <!-- 背景图片 -->
         <div class="bg-all">
             <img id="bg" onerror="this.classList.add('error');">
-
         </div>
         <!-- 鼠标指针 -->
         <div id="g-pointer-1"></div>
@@ -88,40 +71,40 @@
         <!-- 主体内容 -->
         <main id="main" class="main">
             <!-- 搜索框 -->
-            <div class="close-btn">
+            <div id="hidden-search">
+            <div class="close-btn" id="search-box1">
                 <span class="fas fa-times"></span>
             </div>
-            <div class="search-btn">
+            <div class="search-btn" id="search-box">
                 <span class="fas fa-search"></span>
             </div>
-            <div class="search-data">
+            <div class="search-data" id="search-box2">
                 <input type="text" id="inp" required/>
                 <div class="line"></div>
-                <label>Type to search...</label>
+                <label>&nbsp;&nbsp;要 不 搜 些 东 西 ？</label>
                 <span class="fas fa-search" id="btn"></span>
             </div>
 
-            <script>
+            <script defer>
                 var oInp = document.getElementById('inp');
                 var oBtn = document.getElementById('btn');
-            
+
                 oBtn.onclick = function () {
                     Search();
                 }
-            
+
                 document.onkeydown = function () {
                     if (event.keyCode == 13) {
                         Search();
                     }
                 }
-            
+
                 function Search() {
                     var url = 'https://cn.bing.com/search?q=' + oInp.value;
                     window.open(url,'_self');
                 }
             </script>
-
-            <script>
+            <script defer>
                 $(".search-btn").click(function(){
                     $(this).css("display","none");
                     $(".search-data").fadeIn(500);
@@ -143,6 +126,7 @@
                     $(".search-data span").fadeOut(500);
                 });
             </script>
+            </div>
             <div class="container" id="container">
                 <div class="row" id="row">
                     <div class="col left">
@@ -152,8 +136,8 @@
                             <div class="main-img">
                                 <img id="logo-img" src="./img/icon/2973.jpg" alt="img">
                                 <div class="img-title">
-                                    <span class="img-title-big" id="logo-text-1">2973 - </span>
-                                    <span class="img-text" id="logo-text-2">Workspace</span>
+                                    <span class="img-title-big visible-pc" id="logo-text-1">ThirteenIce2973</span>
+                                    <span class="img-text visible-mp" id="logo-text-2">ThirteenIce2973</span>
                                 </div>
                             </div>
                             <!--介绍信息-->
@@ -167,23 +151,24 @@
                             </div>
                             <!--社交链接-->
                             <div class="social" id="social">
-                                <a href="https://github.com/ThirteenIce2973" class="link" id="github" style="margin-left: 4px"
-                                    target="_blank">
-                                    <i class="fa-brands fa-github"></i>
+                                <a href="https://steamcommunity.com/id/thirteenice2973" class="link" id="telegram" target="_blank">
+                                    <i class="fa-brands fa-steam"></i>
                                 </a>
-                                <a href="" class="link"
+
+                                <a href="https://qm.qq.com/q/GVxzeX4hK8" class="link"
                                     id="qq" target="_blank">
                                     <i class="fa-brands fa-qq"></i>
                                 </a>
-                                <a href="" class="link" id="email">
+                                <a href="mailto:thirteenice2973@outlook.com" class="link" id="email">
                                     <i class="fa-solid fa-envelope"></i>
                                 </a>
-                                <a href="" class="link" id="bilibili"
-                                    target="_blank">
+                                <a href="https://space.bilibili.com/2120636720" class="link" id="bilibili"
+                                   target="_blank">
                                     <i class="fa-brands fa-bilibili"></i>
                                 </a>
-                                <a href="" class="link" id="telegram" target="_blank">
-                                    <i class="fa-brands fa-telegram"></i>
+                                <a href="https://github.com/ThirteenIce2973" class="link" id="github" style="margin-left: 4px"
+                                   target="_blank">
+                                    <i class="fa-brands fa-github"></i>
                                 </a>
                                 <a id="link-text">通过这里联系我</a>
                             </div>
@@ -191,7 +176,7 @@
                     </div>
                     <!--第二屏 Logo-->
                     <div class="logo cards" style="display: none" id="changemore">
-                        <br><br> <a class="logo-text" id="logo-text-small">一言 / 天气</a>
+                        <a class="logo-text" id="logo-text-small">一言 / 天气</a>
                     </div>
                     <div class="col right">
                         <div class="main-right">
@@ -268,27 +253,27 @@
                             <div class="link">
                                 <!--第一组-->
                                 <div class="row">
-                                    <div class="col">
-                                        <a id="link-url-1" href="https://www.csdn.net/" target="_blank">
-                                            <div class="link-card cards">
-                                                <i id="link-icon-1" class="fa-solid fa-blog"></i>
-                                                <span class="link-name" id="link-name-1">CSDN</span>
-                                            </div>
-                                        </a>
+                                    <div class="col">  <a id="link-url-2" href="https://ai-bot.cn/" target="_blank">
+                                        <div class="link-card cards">
+                                            <i id="link-icon-2" class="fa-solid fa-cloud"></i>
+                                            <span class="link-name" id="link-name-2">AI工具</span>
+                                        </div>
+                                    </a>
+
                                     </div>
                                     <div class="col 2">
-                                        <a id="link-url-2" href="https://pan.baidu.com/" target="_blank">
+                                        <a id="link-url-1" href="https://leetcode.cn/" target="_blank">
                                             <div class="link-card cards">
-                                                <i id="link-icon-2" class="fa-solid fa-cloud"></i>
-                                                <span class="link-name" id="link-name-2">NetPan</span>
+                                                <i id="link-icon-1" class="fa-solid fa-code"></i>
+                                                <span class="link-name" id="link-name-1">力扣极客</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a id="link-url-3" href="https://music.163.com/" target="_blank">
+                                        <a id="link-url-3" href="https://dictionary.cambridge.org/" target="_blank">
                                             <div class="link-card cards">
-                                                <i id="link-icon-3" class="fa-solid fa-music"></i>
-                                                <span class="link-name" id="link-name-3">Music</span>
+                                                <i id="link-icon-3" class="fa-solid fa-language"></i>
+                                                <span class="link-name" id="link-name-3">剑桥词典</span>
                                             </div>
                                         </a>
                                     </div>
@@ -296,26 +281,26 @@
                                 <!--第二组-->
                                 <div class="row" style="margin-top: 1.5rem;">
                                     <div class="col">
-                                        <a id="link-url-4" href="https://www.bing.com/" target="_blank">
+                                        <a id="link-url-4" href="https://tool.pc.wiki/" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-4" class="fa-solid fa-compass"></i>
-                                                <span class="link-name" id="link-name-4">Bing</span>
+                                                <span class="link-name" id="link-name-4">老弟一号</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col 2">
-                                        <a id="link-url-5" href="https://openai.com/" target="_blank">
+                                        <a id="link-url-5" href="https://zh.moegirl.org.cn/Mainpage" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-5" class="fa-solid fa-book-bookmark"></i>
-                                                <span class="link-name" id="link-name-5">OpenAI</span>
+                                                <span class="link-name" id="link-name-5">萌娘百科</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col">
-                                        <a id="link-url-6" href="https://github.com/arofish/Mirror-pi" target="_blank">
+                                        <a id="link-url-6" href="https://tmes.eu.org" target="_blank">
                                             <div class="link-card cards">
-                                                <i id="link-icon-6" class="fa-solid fa-flask"></i>
-                                                <span class="link-name" id="link-name-6">Mirror-pi</span>
+                                                <i id="link-icon-6" class="fa-solid fa-gamepad"></i>
+                                                <span class="link-name" id="link-name-6">TM战队</span>
                                             </div>
                                         </a>
                                     </div>
@@ -375,39 +360,39 @@
                     <!--网站链接-->
                     <div class="row">
                         <div class="col">
-                            <a href="https://www.cupfox.app/" target="_blank">
+                            <a href="http://www.people.com.cn/" target="_blank">
                                 <div class="link-card cards">
-                                    <span class="link-name">CupFox</span>
+                                    <span class="link-name">人民日报</span>
                                 </div>
                             </a>
                         </div>
                         <div class="col 2">
-                            <a href="https://tool.oschina.net/highlight" target="_blank">
+                            <a href="https://zh.wikihow.com" target="_blank">
                                 <div class="link-card cards">
-                                    <span class="link-name">Code高亮</span>
+                                    <span class="link-name">WikiHow</span>
                                 </div>
                             </a>
                         </div>
                         <div class="col">
-                            <a href="https://auth.bupt.edu.cn/" target="_blank">
+                            <a href="https://www.lintcode.com/" target="_blank">
                                 <div class="link-card cards">
-                                    <span class="link-name">云平台</span>
+                                    <span class="link-name">Lint Code</span>
                                 </div>
                             </a>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 1.5rem;">
                         <div class="col">
-                            <a href="https://chat.forefront.ai/" target="_blank">
+                            <a href="https://www.wetools.com/" target="_blank">
                                 <div class="link-card cards">
-                                    <span class="link-name">ChatGPT</span>
+                                    <span class="link-name">微工具</span>
                                 </div>
                             </a>
                         </div>
                         <div class="col 2">
-                            <a href="https://portals.zhihuishu.com/" target="_blank">
+                            <a href="https://www.linuxcool.com/" target="_blank">
                                 <div class="link-card cards">
-                                    <span class="link-name">智慧树</span>
+                                    <span class="link-name">Linux 命令手册</span>
                                 </div>
                             </a>
                         </div>
@@ -554,7 +539,7 @@
     </footer>
     </section>
     <!-- sw.js -->
-    <script>
+    <script defer>
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", function () {
                 navigator.serviceWorker.register("sw.js");
@@ -566,12 +551,24 @@
         <div class="noscript fixed-top">请开启 JavaScript</div>
     </noscript>
     <!-- JS -->
-    <script type="text/javascript" src="./js/main.js"></script>
-    <script type="text/javascript" src="./js/set.js"></script>
-    <script type="text/javascript" src="./js/time.js"></script>
-    <script type="text/javascript" src="./js/js.cookie.js"></script>
     <script type="text/javascript"
-        src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js">
+            src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js" defer>
+    </script>
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.js" crossorigin="anonymous" defer
+                      referrerpolicy="no-referrer"></script>
+    <script defer>
+        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href =
+            "/upgrade-your-browser/index.html?referrer=" + encodeURIComponent(window.location.href);
+    </script>
+    <!-- 51.LA 统计 -->
+    <script src="./js/51LA.js" defer></script>
+
+    <script type="text/javascript" src="./js/main.js" defer></script>
+    <script type="text/javascript" src="./js/set.js" defer></script>
+    <script type="text/javascript" src="./js/time.js" defer></script>
+    <script type="text/javascript" src="./js/js.cookie.js" defer></script>
+    <script type="text/javascript"
+        src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js" defer>
     </script>
 </body>
 
