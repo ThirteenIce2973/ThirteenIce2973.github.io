@@ -363,7 +363,7 @@ $("#switchmore").on("click", function () {
   } else {
     $("#container").attr("class", "container");
     $("#change").html("Hello&nbsp;World&nbsp;!");
-    $("#change1").html("坚信理想信念，心怀山海，一齐向未来。");
+    $("#change1").html("冰冻三尺，非一日之寒。积土成山，非斯须之作。");
   }
 });
 
@@ -412,7 +412,7 @@ window.addEventListener("load", function () {
       //移动端隐藏更多页面
       $("#container").attr("class", "container");
       $("#change").html("Hello&nbsp;World&nbsp;!");
-      $("#change1").html("冰冻三尺，非一日之寒。积土成山，非斯须之作。");
+      $("#change1").html("坚信理想信念，心怀山海，一齐向未来。");
 
       //移动端隐藏弹窗页面
       $("#box").css("display", "none");
