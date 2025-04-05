@@ -7,23 +7,23 @@ GitHub：https://github.com/imsyy/home
 
 @charset "utf-8";
 
-/* @font-face {
-    font-family: "MiSans";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('../font/MiSans-Regular.subset.woff2') format('woff2');
+/* @fonts-face {
+    fonts-family: "MiSans";
+    fonts-style: normal;
+    fonts-weight: 400;
+    fonts-display: swap;
+    src: url('../fonts/MiSans-Regular.subset.woff2') format('woff2');
 } */
-@import url('../font/Blueaka/Blueaka.css');
+@import url('../fonts/Blueaka/Blueaka.css');
 
 @font-face {
     font-family: "Pacifico-Regular";
-    src: url('../font/Pacifico.ttf') format('truetype');
+    src: url('../fonts/Pacifico.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "UnidreamLED";
-    src: url('../font/UnidreamLED.ttf') format('truetype');
+    src: url('../fonts/UnidreamLED.ttf') format('truetype');
 }
 
 /*全局样式*/
@@ -364,7 +364,7 @@ span#change {
 
 /*
 .social .link i:hover {
-    font-size: 2.5rem;
+    fonts-size: 2.5rem;
 }
 */
 
