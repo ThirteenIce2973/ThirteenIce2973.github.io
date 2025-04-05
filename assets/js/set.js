@@ -90,20 +90,19 @@ let bg_img_preinstall = {
 function setBgImgInit() {
     let bg_img = getBgImg();
     $("input[name='wallpaper-type'][value=" + bg_img["type"] + "]").click();
-
     switch (bg_img["type"]) {
         case "1":
-            $('#bg').attr('src', `./img/background001.webp`) //默认壁纸
+            $('#bg').attr('src', `assets/img/background001.webp`) //默认壁纸
             break;
         case "2":
             $('#bg').attr('src', bg_img_preinstall[2]); //必应每日
             break;
         case "3":
-            $('#bg').attr('src', `./img/background${2 + ~~(Math.random() * 10)}.webp`)
+            $('#bg').attr('src', `assets/img/background${2 + ~~(Math.random() * 10)}.webp`)
             break;
-        case "4":
-            $('#bg').attr('src', bg_img_preinstall[4]); //随机动漫
-            break;
+        // case "4":
+        //     $('#bg').attr('src', bg_img_preinstall[4]); //随机动漫
+        //     break;
     }
 };
 
