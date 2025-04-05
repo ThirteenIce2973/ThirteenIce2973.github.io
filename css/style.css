@@ -1146,3 +1146,26 @@ footer {
     border-radius: 10px;
     background-color: #eeeeee;
 }
+
+.visible-mp{
+
+    display: none;
+
+}
+.visible-pc{
+
+    display: block ;
+
+}
+@media (max-width: 1200px) {
+
+    .visible-mp{
+
+        display: block !important;
+
+    }
+    .visible-pc{
+
+        display: none;
+
+    }
