@@ -260,10 +260,10 @@
 }
 
 /*小于390px时*/
-@media (max-width: 390px) {
-    .main-img img {
-        display: none;
-    }
+/*@media (max-width: 390px) {*/
+/*    .main-img img {*/
+/*        display: none;*/
+/*    }*/
 
     #beian {
         display: none;

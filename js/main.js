@@ -32,7 +32,7 @@ const halfAlementWidth2 = element2.offsetWidth / 2;
 
 function setPosition(x, y) {
   element2.style.transform = `translate(${x - halfAlementWidth2 + 1}px, ${
-    y - halfAlementWidth2 + 1
+      y - halfAlementWidth2 + 1
   }px)`;
 }
 
@@ -44,62 +44,66 @@ body.addEventListener("mousemove", (e) => {
 
 //加载完成后执行
 window.addEventListener(
-  "load",
-  function () {
-    //载入动画
-    $("#loading-box").attr("class", "loaded");
-    $("#bg").css(
-      "cssText",
-      "transform: scale(1);filter: blur(0px);transition: ease 1.5s;"
-    );
-    $(".cover").css("cssText", "opacity: 1;transition: ease 1.5s;");
-    $("#section").css(
-      "cssText",
-      "transform: scale(1) !important;opacity: 1 !important;filter: blur(0px) !important"
-    );
-    let progress = 0;
-    const interval = 50; // 每50ms更新一次
-    const duration = 5000; // 总时长5秒
-    const step = 100 / (duration/interval); // 每次增加的百分比
-
-    const timer = setInterval(() => {
-      progress += step;
-      if(progress >= 100) {
-        progress = 100;
-        clearInterval(timer);
+    "load",
+    function () {
+      // 检查背景图片是否加载完成
+      const bgImage = document.getElementById('bg');
+      if(bgImage.complete) {
+        // 载入动画
+        $("#loading-box").attr("class", "loaded");
+        $("#bg").css(
+            "cssText",
+            "transform: scale(1);filter: blur(0px);transition: ease 1.5s;"
+        );
+        $(".cover").css("cssText", "opacity: 1;transition: ease 1.5s;");
+        $("#section").css(
+            "cssText",
+            "transform: scale(1) !important;opacity: 1 !important;filter: blur(0px) !important"
+        );
       }
-      document.getElementById('loading-s1').textContent = Math.round(progress);
-    }, interval);
-    //用户欢迎
-    setTimeout(function () {
-      iziToast.show({
-        timeout: 2500,
-        icon: false,
-        title: hello,
-        message: "欢迎来到我的主页",
-      });
-    }, 800);
+      let progress = 0;
+      const interval = 50; // 每50ms更新一次
+      const duration = 5000; // 总时长5秒
+      const step = 100 / (duration / interval); // 每次增加的百分比
 
-    //延迟加载音乐播放器
-    let element = document.createElement("script");
-    element.src = "./js/music.js";
-    document.body.appendChild(element);
+      const timer = setInterval(() => {
+        progress += step;
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(timer);
+        }
+        document.getElementById('loading-s1').textContent = Math.round(progress);
+      }, interval);
+      //用户欢迎
+      setTimeout(function () {
+        iziToast.show({
+          timeout: 2500,
+          icon: false,
+          title: hello,
+          message: "欢迎来到我的主页",
+        });
+      }, 800);
 
-    //中文字体缓加载-此处写入字体源文件 （暂时弃用）
-    //先行加载简体中文子集，后续补全字集
-    //由于压缩过后的中文字体仍旧过大，可转移至对象存储或 CDN 加载
-    // const font = new FontFace(
-    //     "MiSans",
-    //     "url(" + "./font/MiSans-Regular.woff2" + ")"
-    // );
-    // document.fonts.add(font);
+      //延迟加载音乐播放器
+      let element = document.createElement("script");
+      element.src = "./js/music.js";
+      document.body.appendChild(element);
 
-    //移动端去除鼠标样式
-    if (Boolean(window.navigator.userAgent.match(/AppWebKit.*Mobile.*/))) {
-      $("#g-pointer-2").css("display", "none");
-    }
-  },
-  false
+      //中文字体缓加载-此处写入字体源文件 （暂时弃用）
+      //先行加载简体中文子集，后续补全字集
+      //由于压缩过后的中文字体仍旧过大，可转移至对象存储或 CDN 加载
+      // const font = new FontFace(
+      //     "MiSans",
+      //     "url(" + "./font/MiSans-Regular.woff2" + ")"
+      // );
+      // document.fonts.add(font);
+
+      //移动端去除鼠标样式
+      if (Boolean(window.navigator.userAgent.match(/AppWebKit.*Mobile.*/))) {
+        $("#g-pointer-2").css("display", "none");
+      }
+    },
+    false
 );
 
 setTimeout(function () {
@@ -120,12 +124,12 @@ setTimeout(function () {
 
 //获取一言
 fetch("https://v1.hitokoto.cn?max_length=24")
-  .then((response) => response.json())
-  .then((data) => {
-    $("#hitokoto_text").html(data.hitokoto);
-    $("#from_text").html(data.from);
-  })
-  .catch(console.error);
+    .then((response) => response.json())
+    .then((data) => {
+      $("#hitokoto_text").html(data.hitokoto);
+      $("#from_text").html(data.from);
+    })
+    .catch(console.error);
 
 let times = 0;
 $("#hitokoto").click(function () {
@@ -138,12 +142,12 @@ $("#hitokoto").click(function () {
       }
     }, 1000);
     fetch("https://v1.hitokoto.cn?max_length=24")
-      .then((response) => response.json())
-      .then((data) => {
-        $("#hitokoto_text").html(data.hitokoto);
-        $("#from_text").html(data.from);
-      })
-      .catch(console.error);
+        .then((response) => response.json())
+        .then((data) => {
+          $("#hitokoto_text").html(data.hitokoto);
+          $("#from_text").html(data.from);
+        })
+        .catch(console.error);
   } else {
     iziToast.show({
       timeout: 1000,
@@ -165,7 +169,7 @@ function getWeather() {
       .then(data => {
         let str = data.data.city
         let city = str.replace(/市/g, '')
-        console.log(data,"sssss")
+        console.log(data, "sssss")
         $('#city_text').html(city);
         fetch("https://geoapi.qweather.com/v2/city/lookup?location=" + city + "&number=1&key=" + key)
             .then(response => response.json())
@@ -244,7 +248,7 @@ function time() {
     s = "0" + s;
   }
   $("#time").html(
-    y +
+      y +
       "&nbsp;年&nbsp;" +
       mm +
       "&nbsp;月&nbsp;" +
@@ -266,62 +270,62 @@ function time() {
 
 //链接提示文字
 $("#social")
-  .mouseover(function () {
-    $("#social").css({
-      background: "rgb(0 0 0 / 25%)",
-      "border-radius": "6px",
-      "backdrop-filter": "blur(5px)",
+    .mouseover(function () {
+      $("#social").css({
+        background: "rgb(0 0 0 / 25%)",
+        "border-radius": "6px",
+        "backdrop-filter": "blur(5px)",
+      });
+      $("#link-text").css({
+        display: "block",
+      });
+    })
+    .mouseout(function () {
+      $("#social").css({
+        background: "none",
+        "border-radius": "6px",
+        "backdrop-filter": "none",
+      });
+      $("#link-text").css({
+        display: "none",
+      });
     });
-    $("#link-text").css({
-      display: "block",
-    });
-  })
-  .mouseout(function () {
-    $("#social").css({
-      background: "none",
-      "border-radius": "6px",
-      "backdrop-filter": "none",
-    });
-    $("#link-text").css({
-      display: "none",
-    });
-  });
 
 $("#github")
-  .mouseover(function () {
-    $("#link-text").html("去 Github 看看");
-  })
-  .mouseout(function () {
-    $("#link-text").html("通过这里联系我");
-  });
+    .mouseover(function () {
+      $("#link-text").html("star 我的项目了吗？");
+    })
+    .mouseout(function () {
+      $("#link-text").html("通过这里联系我");
+    });
 $("#qq")
-  .mouseover(function () {
-    $("#link-text").html("有什么事吗");
-  })
-  .mouseout(function () {
-    $("#link-text").html("通过这里联系我");
-  });
+    .mouseover(function () {
+      $("#link-text").html("有什么事吗？");
+    })
+    .mouseout(function () {
+      $("#link-text").html("通过这里联系我");
+    });
 $("#email")
-  .mouseover(function () {
-    $("#link-text").html("来封 Email");
-  })
-  .mouseout(function () {
-    $("#link-text").html("通过这里联系我");
-  });
+    .mouseover(function () {
+      $("#link-text").html("来封 Email！");
+    })
+    .mouseout(function () {
+      $("#link-text").html("通过这里联系我");
+    });
 $("#bilibili")
-  .mouseover(function () {
-    $("#link-text").html("来 B 站看看 ~");
-  })
-  .mouseout(function () {
-    $("#link-text").html("通过这里联系我");
-  });
+    .mouseover(function () {
+      $("#link-text").html("来 B 站看看 ~");
+    })
+    .mouseout(function () {
+      $("#link-text").html("通过这里联系我");
+    });
 $("#telegram")
-  .mouseover(function () {
-    $("#link-text").html("你懂的 ~");
-  })
-  .mouseout(function () {
-    $("#link-text").html("通过这里联系我");
-  });
+    .mouseover(function () {
+      $("#link-text").html("你懂的 ~");
+    })
+    .mouseout(function () {
+      $("#link-text").html("通过这里联系我");
+    });
 
 //自动变灰
 let myDate = new Date();
@@ -332,22 +336,22 @@ for (let day of days) {
   let d = day.split(".");
   if (mon == d[0] && date == d[1]) {
     document.write(
-      "<style>html{-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none}</style>"
+        "<style>html{-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none}</style>"
     );
     $("#change").html("Silence&nbsp;in&nbsp;silence");
     $("#change1").html("今天是中国国家纪念日，全站已切换为黑白模式");
     window.addEventListener(
-      "load",
-      function () {
-        setTimeout(function () {
-          iziToast.show({
-            timeout: 14000,
-            icon: "fa-solid fa-clock",
-            message: "今天是中国国家纪念日",
-          });
-        }, 3800);
-      },
-      false
+        "load",
+        function () {
+          setTimeout(function () {
+            iziToast.show({
+              timeout: 14000,
+              icon: "fa-solid fa-clock",
+              message: "今天是中国国家纪念日",
+            });
+          }, 3800);
+        },
+        false
     );
   }
 }
@@ -412,7 +416,7 @@ window.addEventListener("load", function () {
       //移动端隐藏更多页面
       $("#container").attr("class", "container");
       $("#change").html("Hello&nbsp;World&nbsp;!");
-      $("#change1").html("坚信理想信念，心怀山海，一齐向未来。");
+      $("#change1").html("心怀山海，一齐向未来！");
 
       //移动端隐藏弹窗页面
       $("#box").css("display", "none");
@@ -435,12 +439,12 @@ $("#changemore").on("click", function () {
 
 //更多页面显示关闭按钮
 $("#more").hover(
-  function () {
-    $("#close").css("display", "block");
-  },
-  function () {
-    $("#close").css("display", "none");
-  }
+    function () {
+      $("#close").css("display", "block");
+    },
+    function () {
+      $("#close").css("display", "none");
+    }
 );
 
 //控制台输出
@@ -474,9 +478,28 @@ let content = `
 Github:  https://github.com/imsyy/home
 `;
 console.log(
-  `%c${title1} %c${title2}
+    `%c${title1} %c${title2}
 %c${content}`,
-  styleTitle1,
-  styleTitle2,
-  styleContent
+    styleTitle1,
+    styleTitle2,
+    styleContent
 );
+document.getElementById('menu').addEventListener('click', function() {
+  const elementB = document.getElementById('hidden-search');
+  elementB.style.display = elementB.style.display === 'none' ? '' : 'none';
+});
+
+var OriginTitle = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+        document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
+        clearTimeout(titleTime);
+    }
+    else {
+        document.title = '(ฅ>ω<*ฅ) 噫又好了~' + OriginTitle;
+        titleTime = setTimeout(function () {
+            document.title = OriginTitle;
+        }, 2000);
+    }
+});
