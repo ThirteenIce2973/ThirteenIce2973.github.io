@@ -57,7 +57,19 @@ window.addEventListener(
       "cssText",
       "transform: scale(1) !important;opacity: 1 !important;filter: blur(0px) !important"
     );
+    let progress = 0;
+    const interval = 50; // 每50ms更新一次
+    const duration = 5000; // 总时长5秒
+    const step = 100 / (duration/interval); // 每次增加的百分比
 
+    const timer = setInterval(() => {
+      progress += step;
+      if(progress >= 100) {
+        progress = 100;
+        clearInterval(timer);
+      }
+      document.getElementById('loading-s1').textContent = Math.round(progress);
+    }, interval);
     //用户欢迎
     setTimeout(function () {
       iziToast.show({
@@ -141,49 +153,41 @@ $("#hitokoto").click(function () {
   }
 });
 
-// 获取天气
-// 请前往 https://www.mxnzp.com/doc/list 申请 app_id 和 app_secret
-const mainKey = "c577e8a40049cf51879ff72c9dc1ae8e"; // 高德开发者 Key
-const getWeather = () => {
-  fetch(`https://restapi.amap.com/v3/ip?key=${mainKey}`)
-    .then((response) => response.json())
-    .then((res) => {
-      const adcode = res.adcode;
-      $("#city_text").html(res.city);
-      fetch(
-        `https://restapi.amap.com/v3/weather/weatherInfo?key=${mainKey}&city=${adcode}`
-      )
-        .then((response) => response.json())
-        .then((res) => {
-          if (res.status) {
-            $("#wea_text").html(res.lives[0].weather);
-            $("#tem_text").html(res.lives[0].temperature + "°C&nbsp;");
-            $("#win_text").html(res.lives[0].winddirection + "风");
-            $("#win_speed").html(res.lives[0].windpower + "级");
-          } else {
-            console.error("天气信息获取失败");
-            iziToast.show({
-              timeout: 2000,
-              icon: "fa-solid fa-cloud-sun",
-              message: "天气信息获取失败",
-            });
-          }
-        });
-    })
-    .catch((err) => {
-      console.error("天气信息获取失败：" + err);
-      iziToast.show({
-        timeout: 2000,
-        icon: "fa-solid fa-cloud-sun",
-        message: "天气信息获取失败",
-      });
-    });
-};
+//获取天气
+//请前往 https://www.mxnzp.com/doc/list 申请 app_id 和 app_secret
+//请前往 https://dev.qweather.com/ 申请 key
+const add_id = "vcpmlmqiqnjpxwq1"; // app_id
+const app_secret = "PeYnsesgkmK7qREhIFppIcsoN0ZShv3c"; // app_secret
+const key = "691d007d585841c09e9b41e79853ecc2" // key
+function getWeather() {
+  fetch("https://www.mxnzp.com/api/ip/self?app_id=" + add_id + "&app_secret=" + app_secret)
+      .then(response => response.json())
+      .then(data => {
+        let str = data.data.city
+        let city = str.replace(/市/g, '')
+        console.log(data,"sssss")
+        $('#city_text').html(city);
+        fetch("https://geoapi.qweather.com/v2/city/lookup?location=" + city + "&number=1&key=" + key)
+            .then(response => response.json())
+            .then(location => {
+              let id = location.location[0].id
+              fetch("https://devapi.qweather.com/v7/weather/now?location=" + id + "&key=" + key)
+                  .then(response => response.json())
+                  .then(weather => {
+                    $('#wea_text').html(weather.now.text)
+                    $('#tem_text').html(weather.now.temp + "°C&nbsp;")
+                    $('#win_text').html(weather.now.windDir)
+                    $('#win_speed').html(weather.now.windScale + "级")
+                  })
+            })
+      })
+      .catch(console.error);
+}
 
 getWeather();
 
 let wea = 0;
-$("#upWeather").click(function () {
+$('#upWeather').click(function () {
   if (wea == 0) {
     wea = 1;
     let index = setInterval(function () {
@@ -196,13 +200,13 @@ $("#upWeather").click(function () {
     iziToast.show({
       timeout: 2000,
       icon: "fa-solid fa-cloud-sun",
-      message: "实时天气已更新",
+      message: '实时天气已更新'
     });
   } else {
     iziToast.show({
       timeout: 1000,
       icon: "fa-solid fa-circle-exclamation",
-      message: "请稍后再更新哦",
+      message: '请稍后再更新哦'
     });
   }
 });
@@ -359,7 +363,7 @@ $("#switchmore").on("click", function () {
   } else {
     $("#container").attr("class", "container");
     $("#change").html("Hello&nbsp;World&nbsp;!");
-    $("#change1").html("一个不正经的Up");
+    $("#change1").html("坚信理想信念，心怀山海，一齐向未来。");
   }
 });
 
@@ -408,7 +412,7 @@ window.addEventListener("load", function () {
       //移动端隐藏更多页面
       $("#container").attr("class", "container");
       $("#change").html("Hello&nbsp;World&nbsp;!");
-      $("#change1").html("一个不正经的Up");
+      $("#change1").html("冰冻三尺，非一日之寒。积土成山，非斯须之作。");
 
       //移动端隐藏弹窗页面
       $("#box").css("display", "none");
@@ -438,16 +442,6 @@ $("#more").hover(
     $("#close").css("display", "none");
   }
 );
-
-//屏蔽右键
-document.oncontextmenu = function () {
-  iziToast.show({
-    timeout: 2000,
-    icon: "fa-solid fa-circle-exclamation",
-    message: "为了浏览体验，本站禁用右键",
-  });
-  return false;
-};
 
 //控制台输出
 //console.clear();
