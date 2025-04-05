@@ -367,7 +367,7 @@ $("#switchmore").on("click", function () {
   } else {
     $("#container").attr("class", "container");
     $("#change").html("Hello&nbsp;World&nbsp;!");
-    $("#change1").html("冰冻三尺，非一日之寒。积土成山，非斯须之作。");
+    $("#change1").html("梦虽遥，追则能达。愿虽艰，持则可圆。");
   }
 });
 
