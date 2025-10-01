@@ -411,8 +411,17 @@ body [data-aos='zoom-in'] {
   font-family: "iconfont";
   content: "\e630";
 }
+.icon-github:before {
+  content: "\e619";
+}
+.icon-bilibili:before {
+  content: "\e603";
+}
 .icon-weibo:before {
   content: "\e62c";
+}
+.icon-email:before {
+  content: "\e63c";
 }
 .sidebar-toc-btn:before {
   font-family: "iconfont";
@@ -1520,6 +1529,36 @@ button {
 @media screen and (max-width: 767px) {
   .post-meta span {
     margin: 0 8px;
+  }
+}
+@media screen and (max-width: 1241px) {
+  .post-meta > span {
+    margin: 0 8px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .post-meta > span {
+    margin: 0 6px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .post-meta > span {
+    margin: 0 2px;
+  }
+}
+@media screen and (max-width: 1241px) {
+  .post-meta > span span {
+    margin: 0 6px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .post-meta > span span {
+    margin: 0 4px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .post-meta > span span {
+    margin: 0 3px;
   }
 }
 .post-article {
@@ -3134,6 +3173,18 @@ pre .javascript .function {
 }
 .sidebar-social-icon:hover {
   transform: scale(1.2);
+}
+.icon-email {
+  color: var(--red-2);
+}
+.icon-github {
+  color: #191717;
+}
+[data-theme="dark"] .icon-github {
+  color: #bc88ff;
+}
+.icon-bilibili {
+  color: #00a1d6;
 }
 .sidebar-menu-icon,
 .sidebar-menu-link {

@@ -127,8 +127,17 @@
   font-family: "iconfont";
   content: "\e630";
 }
+.icon-github:before {
+  content: "\e619";
+}
+.icon-bilibili:before {
+  content: "\e603";
+}
 .icon-weibo:before {
   content: "\e62c";
+}
+.icon-email:before {
+  content: "\e63c";
 }
 .sidebar-toc-btn:before {
   font-family: "iconfont";

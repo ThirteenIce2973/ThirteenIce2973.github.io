@@ -137,8 +137,18 @@
   font-family: var(--font-icon);
   content: "\f105";
 }
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-bilibili:before {
+  content: "\e3d9";
+}
 .icon-weibo:before {
   content: "\f18a";
+}
+.icon-email:before {
+  content: "\f0e0";
+  font-weight: 900;
 }
 .sidebar-toc-btn:before {
   font-family: var(--font-icon);
