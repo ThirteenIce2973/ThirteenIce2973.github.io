@@ -1,6 +1,6 @@
 
   <!DOCTYPE html>
-  <html lang="en"  
+  <html lang="zh-CN"  
     
       data-theme-mode="auto"
     
@@ -14,10 +14,10 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = 'All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://thirteenice2973.github.io';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://thirteenice2973.github.io';</script>
   
   <title>
-    Archives |
+    归档 |
     
     2973 | 工作空间
   </title>
@@ -41,7 +41,7 @@
 <meta property="og:url" content="https://thirteenice2973.github.io/archives/index.html">
 <meta property="og:site_name" content="2973 | 工作空间">
 <meta property="og:description" content="心之所向，星辰大海！">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://thirteenice2973.github.io/images/banner.webp">
 <meta property="article:author" content="ThirteenIce2973">
 <meta name="twitter:card" content="summary">
@@ -58,6 +58,16 @@
 
   <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
   
+    
+      
+        <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l&#x2F;9On385z&#x2F;&#x2F;&#x2F;+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+      
+    
+  
+  
+    
+      <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
+    
   
   
   
@@ -94,7 +104,7 @@
       
         
       
-      <div class="loading-word">Loading...</div>
+      <div class="loading-word">少女祈祷中...</div>
     </div>
   </div>
   </div>
@@ -143,7 +153,7 @@
               &#xe62b;
              
           </div>
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="/">首页</a>
         </span>
       
         <span class="main-nav-link-wrap">
@@ -152,7 +162,7 @@
               &#xe62b;
              
           </div>
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">归档</a>
         </span>
       
         <span class="main-nav-link-wrap">
@@ -161,7 +171,7 @@
               &#xe62b;
              
           </div>
-          <a class="main-nav-link" href="/about">about😄</a>
+          <a class="main-nav-link" href="/about">关于</a>
         </span>
       
         <span class="main-nav-link-wrap">
@@ -170,7 +180,7 @@
               &#xe62b;
              
           </div>
-          <a class="main-nav-link" href="/friend">Friend</a>
+          <a class="main-nav-link" href="/friend">友链</a>
         </span>
       
     
@@ -178,8 +188,10 @@
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation">
     
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed" target="_blank"></a>
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a>
     
+    
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索" aria-label="搜索"></a>
     
   </nav>
   
@@ -189,9 +201,18 @@
     
       <picture>
         
+          
+            <source media="(max-width: 479px)" srcset="/images/banner-600w.webp">
+          
+            <source media="(max-width: 799px)" srcset="/images/banner-800w.webp">
+          
+            <source media="(min-width: 800px)" srcset="/images/banner.webp">
+          
+          <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.webp" alt="">
+        
       </picture>
       
-        <img  fetchpriority="high" src="/images/banner.webp" alt="">
+        <img alt="" style="visibility: hidden;">
       
     
   
@@ -201,7 +222,7 @@
         
         
           <span id="logo">
-            <h1 data-aos="slide-up">Archives</h1>
+            <h1 data-aos="slide-up">归档</h1>
           </span>
         
       
@@ -234,15 +255,15 @@
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Post</div>
+    <div>文章</div>
     <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
-    <div>Category</div>
+    <div>分类</div>
     <div class="sidebar-state-number">0</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>Tag</div>
+    <div>标签</div>
     <div class="sidebar-state-number">0</div>
   </div>
 </div>
@@ -253,43 +274,43 @@
   
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Home</div>
+        <div class="sidebar-menu-link">首页</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Archives</div>
+        <div class="sidebar-menu-link">归档</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="about😄"></a>
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">about😄</div>
+        <div class="sidebar-menu-link">关于</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Friend</div>
+        <div class="sidebar-menu-link">友链</div>
       </div>
     
   
@@ -339,7 +360,7 @@
     </span>
   </div>
   
-    <a class="archive-article-title" href="/2025/09/25/first/">first</a>
+    <a class="archive-article-title" href="/2025/09/25/first/">加强维什戴尔</a>
   
 </li>
 
@@ -387,7 +408,7 @@
     </div>
     
       <div>
-        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
         Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
       </div>
     
@@ -409,10 +430,10 @@
     
       <div>
         <span class="icon-eye"></span>
-        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
         &nbsp;|&nbsp;
         <span class="icon-user"></span>
-        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
       </div>
     
   </div>
@@ -436,15 +457,15 @@
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Post</div>
+    <div>文章</div>
     <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
-    <div>Category</div>
+    <div>分类</div>
     <div class="sidebar-state-number">0</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>Tag</div>
+    <div>标签</div>
     <div class="sidebar-state-number">0</div>
   </div>
 </div>
@@ -455,43 +476,43 @@
   
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Home</div>
+        <div class="sidebar-menu-link">首页</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Archives</div>
+        <div class="sidebar-menu-link">归档</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="about😄"></a>
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">about😄</div>
+        <div class="sidebar-menu-link">关于</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Friend</div>
+        <div class="sidebar-menu-link">友链</div>
       </div>
     
   
@@ -504,6 +525,22 @@
 
     </div>
     
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
     
     
     
@@ -512,6 +549,10 @@
 
 <script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
 
+
+
+  
+<script src="https://npm.webcache.cn/material-theme@1.0.0/dist/material-theme.umd.js" integrity="sha384-vLev0II0HKFaxkcm+&#x2F;7kX5IGwVFBASkGchU311wmU&#x2F;veIj2bB0UcBkQbW6yw2asK" crossorigin="anonymous"></script>
 
 
 
@@ -545,6 +586,34 @@
 
 
 
+
+
+  <script>
+    var ALGOLIA_CONFIG = {
+      logo: "/images/algolia_logo.svg",
+      algolia: {
+        applicationID: "MUPKH8JARQ",
+        apiKey: "93beea6b6b07d972bc113b5e531dbf69",
+        indexName: "my-hexo-blog",
+        hits: {
+          "per_page": parseInt("10")
+        },
+        labels: {
+          "input_placeholder": "搜索.....",
+          "hits_empty": "未发现与 「${query}」相关内容",
+          "hits_stats": "找到${hits}条结果（用时 ${time} ms）"
+        }
+      }
+    };
+  </script>
+  
+<script src="https://npm.webcache.cn/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js" integrity="sha384-xvLS0jfKuoREs7pqkRI&#x2F;OI8GcqohO5S+jQz7ZBtQXnsXmD+9jDOOY4cL6dCPzlrk" crossorigin="anonymous" defer></script>
+
+  
+<script src="https://npm.webcache.cn/@reimujs/instantsearch.js@4.57.0-beta.1/dist/instantsearch.production.min.js" integrity="sha384-aagKMe8nkqaP2DYQc8kkYOL5l+M5Q2WH&#x2F;Uhr4teOh0Ybp0RZj0kUSDm45qPikMjK" crossorigin="anonymous" defer></script>
+
+  
+<script src="/js/algolia_search.js" defer></script>
 
 
 
@@ -609,6 +678,8 @@
 </script>
 
 
+
+  
 
 
 

@@ -1,6 +1,6 @@
 
   <!DOCTYPE html>
-  <html lang="en"  
+  <html lang="zh-CN"  
     
       data-theme-mode="auto"
     
@@ -14,7 +14,7 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = 'All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://thirteenice2973.github.io';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://thirteenice2973.github.io';</script>
   
   <title>
     关于 |
@@ -41,7 +41,7 @@
 <meta property="og:url" content="https://thirteenice2973.github.io/about/index.html">
 <meta property="og:site_name" content="2973 | 工作空间">
 <meta property="og:description" content="关于">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://thirteenice2973.github.io/images/banner.webp">
 <meta property="article:published_time" content="2021-09-22T13:01:47.000Z">
 <meta property="article:modified_time" content="2025-09-24T12:35:47.164Z">
@@ -60,6 +60,20 @@
 
   <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
   
+    
+      
+        
+<link rel="stylesheet" href="https://npm.webcache.cn/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l&#x2F;9On385z&#x2F;&#x2F;&#x2F;+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+
+      
+    
+  
+  
+    
+      
+<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
+
+    
   
   
   
@@ -96,7 +110,7 @@
       
         
       
-      <div class="loading-word">Loading...</div>
+      <div class="loading-word">少女祈祷中...</div>
     </div>
   </div>
   </div>
@@ -145,7 +159,7 @@
               &#xe62b;
              
           </div>
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="/">首页</a>
         </span>
       
         <span class="main-nav-link-wrap">
@@ -154,7 +168,7 @@
               &#xe62b;
              
           </div>
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">归档</a>
         </span>
       
         <span class="main-nav-link-wrap">
@@ -163,7 +177,7 @@
               &#xe62b;
              
           </div>
-          <a class="main-nav-link" href="/about">about😄</a>
+          <a class="main-nav-link" href="/about">关于</a>
         </span>
       
         <span class="main-nav-link-wrap">
@@ -172,7 +186,7 @@
               &#xe62b;
              
           </div>
-          <a class="main-nav-link" href="/friend">Friend</a>
+          <a class="main-nav-link" href="/friend">友链</a>
         </span>
       
     
@@ -180,8 +194,10 @@
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation">
     
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed" target="_blank"></a>
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a>
     
+    
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索" aria-label="搜索"></a>
     
   </nav>
   
@@ -191,9 +207,18 @@
     
       <picture>
         
+          
+            <source media="(max-width: 479px)" srcset="/images/banner-600w.webp">
+          
+            <source media="(max-width: 799px)" srcset="/images/banner-800w.webp">
+          
+            <source media="(min-width: 800px)" srcset="/images/banner.webp">
+          
+          <img crossorigin="anonymous" fetchpriority="high" src="/images/banner.webp" alt="关于">
+        
       </picture>
       
-        <img  fetchpriority="high" src="/images/banner.webp" alt="关于">
+        <img alt="关于" style="visibility: hidden;">
       
     
   
@@ -236,15 +261,15 @@
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Post</div>
+    <div>文章</div>
     <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
-    <div>Category</div>
+    <div>分类</div>
     <div class="sidebar-state-number">0</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>Tag</div>
+    <div>标签</div>
     <div class="sidebar-state-number">0</div>
   </div>
 </div>
@@ -255,43 +280,43 @@
   
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Home</div>
+        <div class="sidebar-menu-link">首页</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Archives</div>
+        <div class="sidebar-menu-link">归档</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="about😄"></a>
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">about😄</div>
+        <div class="sidebar-menu-link">关于</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Friend</div>
+        <div class="sidebar-menu-link">友链</div>
       </div>
     
   
@@ -331,17 +356,78 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2>
+        <h2 id="关于"><a class="markdownIt-Anchor" href="#关于"></a> 关于</h2>
+
       
     </div>
     <footer class="article-footer">
       
+        <blockquote class="article-copyright">
+    <p><strong><span class="icon-user icon"></span>本文作者：</strong>ThirteenIce2973 @ 2973 | 工作空间</p>
+    <p><strong><span class="icon-link icon"></span>本文链接：</strong><a href="https://thirteenice2973.github.io/about/index.html">https://thirteenice2973.github.io/about/index.html</a></p>
+    
+    
+    
+    <p><strong><span class="icon-copyright icon"></span>本文版权：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener nofollow noreferrer" target="_blank"><span class="icon-creative-commons"></span>BY-NC-SA</a> 许可协议。转载请注明出处！</p>
+    <span class="icon-creative-commons article-copyright-bg"></span>
+  </blockquote>
+      
+      
+      
+        <div class="share-wrapper">
+  
+    <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fthirteenice2973.github.io%2Fabout%2Findex.html&amp;appkey=&amp;title=%E5%85%B3%E4%BA%8E&amp;pic=&amp;ralateUid=" target="_blank" rel="noopener noreferrer" title="关于">
+      <div class="share-icon icon icon-weibo">
+        
+      </div>
+    </a>
+  
+    <a href="https://connect.qq.com/widget/shareqq/index.html?url=www.baidu.com&amp;title=%E5%85%B3%E4%BA%8E&amp;desc=%E5%85%B3%E4%BA%8E&amp;source=https%3A%2F%2Fthirteenice2973.github.io" target="_blank" rel="noopener noreferrer" title="关于">
+      <div class="share-icon icon icon-qq">
+        
+      </div>
+    </a>
+  
+    <a href="javascript:;"  title="关于">
+      <div class="share-icon icon icon-weixin">
+        
+          <div id="share-weixin">
+            <div class="share-weixin-dom">
+              <div class="share-weixin-content">
+                <img id="share-weixin-banner"> 
+                <div id="share-weixin-title"></div>
+                <div id="share-weixin-desc"></div>
+              </div>
+              <div class="share-weixin-qrcode">
+                <div class="share-weixin-info">
+                  <div id="share-weixin-author"></div>
+                  <div id="share-weixin-theme">Powered By hexo-theme-reimu</div>
+                </div>
+                <img id="share-weixin-qr" >
+              </div>
+            </div>
+            <div class="share-weixin-canvas"></div>
+          </div>
+        
+      </div>
+    </a>
+  
+</div>
+      
+      
+      
+        <a data-aos="zoom-in" href="/about/index.html#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/about/index.html" itemprop="commentCount"></span>
+          留言
+        </a>
       
       
       
       
-      
-      
+        <span data-aos="zoom-in" class="article-visitor-link">
+          <span class="waline-pageview-count" data-path="/about/">0</span>
+          <em class="post-meta-item-text">阅读量</em>
+        </span>
       
       
 
@@ -358,6 +444,32 @@
 
 
 
+
+  <section id="comments" data-aos="fade-up">
+    <div class="comment-header">
+      
+      
+        
+      
+      <h2 class="comment-title">说些什么吧！</h2>
+      <div class="comment-selector">
+        <div class="comment-selector-wrap">
+            
+            <div class="selector-item" data-selector="waline">
+              <span>waline</span>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+    <div class="comment-content">
+      
+        <div class="comment waline-comment" data-aos="fade-up"
+          id="waline-comment">
+        </div>
+      
+    </div>
+  </section>
 
 
 </section>
@@ -380,7 +492,7 @@
     </div>
     
       <div>
-        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
         Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
       </div>
     
@@ -402,10 +514,10 @@
     
       <div>
         <span class="icon-eye"></span>
-        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
         &nbsp;|&nbsp;
         <span class="icon-user"></span>
-        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
       </div>
     
   </div>
@@ -429,15 +541,15 @@
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Post</div>
+    <div>文章</div>
     <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
-    <div>Category</div>
+    <div>分类</div>
     <div class="sidebar-state-number">0</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>Tag</div>
+    <div>标签</div>
     <div class="sidebar-state-number">0</div>
   </div>
 </div>
@@ -448,43 +560,43 @@
   
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Home</div>
+        <div class="sidebar-menu-link">首页</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Archives</div>
+        <div class="sidebar-menu-link">归档</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="about😄"></a>
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">about😄</div>
+        <div class="sidebar-menu-link">关于</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
         <div class="sidebar-menu-icon icon rotate">
           
             &#xe62b;
           
         </div>
-        <div class="sidebar-menu-link">Friend</div>
+        <div class="sidebar-menu-link">友链</div>
       </div>
     
   
@@ -497,6 +609,22 @@
 
     </div>
     
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
     
     
     
@@ -505,6 +633,10 @@
 
 <script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
 
+
+
+  
+<script src="https://npm.webcache.cn/material-theme@1.0.0/dist/material-theme.umd.js" integrity="sha384-vLev0II0HKFaxkcm+&#x2F;7kX5IGwVFBASkGchU311wmU&#x2F;veIj2bB0UcBkQbW6yw2asK" crossorigin="anonymous"></script>
 
 
 
@@ -540,6 +672,34 @@
 
 
 
+  <script>
+    var ALGOLIA_CONFIG = {
+      logo: "/images/algolia_logo.svg",
+      algolia: {
+        applicationID: "MUPKH8JARQ",
+        apiKey: "93beea6b6b07d972bc113b5e531dbf69",
+        indexName: "my-hexo-blog",
+        hits: {
+          "per_page": parseInt("10")
+        },
+        labels: {
+          "input_placeholder": "搜索.....",
+          "hits_empty": "未发现与 「${query}」相关内容",
+          "hits_stats": "找到${hits}条结果（用时 ${time} ms）"
+        }
+      }
+    };
+  </script>
+  
+<script src="https://npm.webcache.cn/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js" integrity="sha384-xvLS0jfKuoREs7pqkRI&#x2F;OI8GcqohO5S+jQz7ZBtQXnsXmD+9jDOOY4cL6dCPzlrk" crossorigin="anonymous" defer></script>
+
+  
+<script src="https://npm.webcache.cn/@reimujs/instantsearch.js@4.57.0-beta.1/dist/instantsearch.production.min.js" integrity="sha384-aagKMe8nkqaP2DYQc8kkYOL5l+M5Q2WH&#x2F;Uhr4teOh0Ybp0RZj0kUSDm45qPikMjK" crossorigin="anonymous" defer></script>
+
+  
+<script src="/js/algolia_search.js" defer></script>
+
+
 
 
   
@@ -570,7 +730,7 @@
           url: "https://thirteenice2973.github.io/about/index.html",
           excerpt: "",
           description: "",
-          stripContent: "关于",
+          stripContent: " 关于 ",
           date: "Wed Sep 22 2021 21:01:47 GMT+0800",
           updated: "Wed Sep 24 2025 20:35:47 GMT+0800",
           cover: "/images/banner.webp",
@@ -582,6 +742,13 @@
       
         
 <script src="/js/insert_highlight.js" data-pjax></script>
+
+        
+          
+<script src="https://npm.webcache.cn/@zumer/snapdom@1.9.9/dist/snapdom.min.js" integrity="sha384-taz9Bq0wPqLsuiB4ix4blTozt&#x2F;y84cjbMX5ZWkfPPjpVBme8M&#x2F;jWopanNBcdH&#x2F;qp" crossorigin="anonymous" defer data-pjax></script>
+
+          
+<script src="https://npm.webcache.cn/qrcode@1.5.1/build/qrcode.js" integrity="sha384-VT1EeewTCEXgndcPMQ0PzV+uVFYjxFIjmAA7s5gcMX9t4Dt5TD+OVQIn7NJWIXn7" crossorigin="anonymous" defer data-pjax></script>
 
         
       
@@ -619,6 +786,162 @@
 
 
 
+
+<script data-pjax>
+  var loadScript = (src, integrity) => {
+    const script = document.createElement('script');
+    script.src = src;
+    if (integrity) script.integrity = integrity;
+    script.crossOrigin = 'anonymous';
+    return script;
+  };
+
+  var commentConfigKeys = ["waline"];
+  var commentConfig = {
+    
+    
+    waline: {
+      enable: true,
+      load: async () => {
+        const container = document.querySelector('.waline-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        let walineInit;
+        const walineCdn = 'https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.mjs';
+        const walineIntegrity = 'sha384-9sbqJjrfGjbkI6/PI4nU/MvBfEmkkPC4YK9I4zBeMIf1CVCZdCMH/KinBEAZII/5';
+
+        const module = await safeImport(walineCdn, walineIntegrity);
+        walineInit = module.init;
+
+        window.walineInstance = walineInit({
+          el: '.waline-comment',
+          serverURL: 'https://hexo-blog-waline-bi2dqfnnt-thirteenice2973s-projects.vercel.app',
+          lang: document.documentElement.lang || 'en',
+          locale: {},
+          emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
+          meta: ["nick","mail","link"],
+          requiredMeta: ["nick","mail"],
+          wordLimit: JSON.parse('0'),
+          comment: true,
+          pageSize: JSON.parse('10'),
+          dark: 'html[data-theme="dark"]',
+          pageview: JSON.parse('true'),
+        });
+      }
+    },
+    
+    
+    
+    
+  }
+  commentConfig.enable = commentConfigKeys.some(key => commentConfig[key].enable);
+
+  var defaultComment = '';
+  if (commentConfig.enable) {
+    // 1. 首先检查localStorage中是否有保存的评论类型
+    var savedCommentType = localStorage.getItem('commentType');
+    
+    // 2. 如果localStorage中有值且对应的评论系统可用，就使用它
+    if (savedCommentType) {
+      if (commentConfig[savedCommentType]?.enable) {
+        defaultComment = savedCommentType;
+      }
+    }
+    
+    // 3. 如果localStorage无效，检查配置的默认评论系统
+    if (!defaultComment) {
+      var configDefault = 'waline';
+      if (commentConfig[configDefault]?.enable) {
+        defaultComment = configDefault;
+      }
+    }
+    
+    // 4. 如果前两项都无效，按指定顺序找到第一个可用的评论系统
+    if (!defaultComment) {
+      defaultComment = commentConfigKeys.find(sys => commentConfig[sys].enable) || '';
+    }
+  }
+  function loadComments() {
+    if (!commentConfig.enable) return;
+    const loadedComments = {
+      valine: false,
+      waline: false,
+      twikoo: false,
+      gitalk: false,
+      giscus: false
+    };
+
+    // 隐藏所有评论容器
+    const hideAllComments = () => {
+      const commentContainers = document.querySelectorAll('.comment');
+      commentContainers.forEach(container => {
+        container.style.display = 'none';
+      });
+    };
+
+    // 按需加载评论系统
+    const loadCommentSystem = (type) => {
+      if (loadedComments[type]) {
+        // 如果已加载，只需显示对应容器
+        document.querySelector(`.${type}-comment`).style.display = 'block';
+        return;
+      }
+
+      // 根据类型加载对应的脚本
+      commentConfig[type]?.load();
+      loadedComments[type] = true;
+    };
+
+    // 评论组件选择器
+    const changeActiveCommentItems = (item) => {
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let i = 0; i < commentItems.length; i++) {
+        commentItems[i].classList.remove('active');
+      }
+      item.classList.add('active');
+
+      // 获取要加载的评论系统类型
+      const commentType = item.getAttribute('data-selector');
+
+      // 隐藏所有评论系统
+      hideAllComments();
+
+      // 加载选中的评论系统
+      loadCommentSystem(commentType);
+    };
+
+    const commentInit = () => {
+      // 评论组件选择器点击事件
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let item of commentItems) {
+        item.addEventListener('click', () => {
+          // 保存选择器状态
+          const commentType = item.getAttribute('data-selector');
+          window.localStorage.setItem('commentType', commentType);
+          // 切换选中状态
+          changeActiveCommentItems(item);
+        });
+      }
+
+      // 检查是否需要加载默认评论系统
+      if (defaultComment) {
+        const defaultSelectorItem = document.querySelector(`[data-selector="${defaultComment}"]`);
+        if (!defaultSelectorItem) return;
+        defaultSelectorItem.style.display = 'block';
+        defaultSelectorItem.classList.add('active');
+        loadCommentSystem(defaultComment);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', commentInit);
+    } else {
+      commentInit();
+    }
+  };
+  loadComments();
+</script>
 
       
     
@@ -658,6 +981,8 @@
 </script>
 
 
+
+  
 
 
 
